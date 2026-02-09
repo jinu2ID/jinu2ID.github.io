@@ -6,6 +6,7 @@
     <title>Jinu Jacob</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/projects.js" defer></script>
+    <script src="./js/form-validation.js" defer></script>
   </head>
   <body>
     <header>
@@ -117,8 +118,10 @@
             <figcaption>Custom Oh My Zsh terminal</figcaption>
           </figure>
           <figure>
-            <img src="./images/setup_proof/custom_shell_config.png" alt="custom shell config" />
-            <figcaption>.zshrc file with custom aliases</figcaption>
+            <img src="./images/setup_proof/custom_aliases.png" alt="custom shell config" />
+            <figcaption>
+              I created a .aliases file so I could use the same aliases for both Bash and Zsh shells by adding source ~/.aliases to .bashrc and .zshrc
+            </figcaption>
           </figure>
           <figure>
             <img src="./images/setup_proof/vscode-extensions.png" alt="vscode extensions" />
@@ -141,6 +144,21 @@
     </section>
     <section id="contact" class="contact-section">
       <h2>Contact Me</h2>
+      <form id="contact-form" action="https://formspree.io/f/xykdzynk" method="POST" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <span class="error-message" id="name-error"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <span class="error-message" id="email-error"></span>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <span class="error-message" id="message-error"></span>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
     </section>
     <footer>
       <p>&copy; 2026 Jinu Jacob. All rights reserved.</p>
