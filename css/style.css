@@ -481,7 +481,7 @@ section[id] {
 
 /* Footer */
 footer {
-  background-color: var(--color-heading);
+  background-color: var(--color-primary);
   color: var(--color-white);
   text-align: center;
   padding: 2rem;
@@ -491,6 +491,20 @@ footer {
 footer p {
   margin: 0;
   font-size: 0.9rem;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: var(--color-white);
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive design - mobile-friendly */
