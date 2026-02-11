@@ -12,6 +12,7 @@
   --color-primary-light: #2563eb;
   --color-heading: #2c3e50;
   --color-text: #333;
+  --color-text-on-primary: #fff;
   --color-text-muted: #666;
   --color-text-light: #888;
   --color-background: #f4f4f4;
@@ -29,6 +30,24 @@
   --shadow-medium: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Dark Theme */
+body.dark {
+  --color-background: #1a1a2e;
+  --color-white: #2d2d44;
+  --color-heading: #e0e0e0;
+  --color-text: #cccccc;
+  --color-text-muted: #aaaaaa;
+  --color-text-light: #999999;
+  --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark #contact-form input,
+body.dark #contact-form textarea {
+  background-color: #16213e;
+  color: var(--color-text);
+  border-color: #444;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
@@ -39,7 +58,7 @@ body {
 
 header {
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-text-on-primary);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -63,7 +82,7 @@ nav ul {
 }
 
 nav a {
-  color: var(--color-white);
+  color: var(--color-text-on-primary);
   text-decoration: none;
   font-size: 1rem;
   transition: color var(--transition-speed);
@@ -92,6 +111,13 @@ nav a:hover {
   border-radius: 2px;
 }
 
+.theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 /* Prevents header from hiding sections when clicking a nav link*/
 section[id] {
   scroll-margin-top: 100px;
@@ -105,7 +131,7 @@ section[id] {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--color-white);
+  color: var(--color-text-on-primary);
   padding: 2rem;
   margin-top: calc(-1 * var(--header-height));
   padding-top: calc(var(--header-height) + 2rem);
@@ -420,7 +446,7 @@ section[id] {
   display: inline-block;
   padding: 0.5rem 1rem;
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-text-on-primary);
   text-decoration: none;
   border-radius: 4px;
   font-size: 0.9rem;
@@ -487,7 +513,7 @@ section[id] {
   width: 100%;
   padding: 1rem;
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-text-on-primary);
   border: none;
   border-radius: 4px;
   font-size: 1.1rem;
@@ -502,7 +528,7 @@ section[id] {
 /* Footer */
 footer {
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-text-on-primary);
   text-align: center;
   padding: 2rem;
   margin-top: 2rem;
@@ -518,7 +544,7 @@ footer p {
 }
 
 .footer-links a {
-  color: var(--color-white);
+  color: var(--color-text-on-primary);
   text-decoration: none;
   margin: 0 1rem;
 }
