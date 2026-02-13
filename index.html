@@ -14,7 +14,7 @@
   <body>
     <header>
       <div class="logo">
-        <h1>Jinu Jacob</h1>
+        <a href="#home">Jinu Jacob</a>
       </div>
       <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
         <span class="hamburger-line"></span>
@@ -155,15 +155,15 @@
       <h2>Contact Me</h2>
       <form id="contact-form" action="https://formspree.io/f/xykdzynk" method="POST" novalidate>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+        <input type="text" id="name" name="name" required aria-required="true" />
         <span class="error-message" id="name-error"></span>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" required aria-required="true" />
         <span class="error-message" id="email-error"></span>
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
         <span class="error-message" id="message-error"></span>
 
         <button type="submit" class="submit-btn">Send Message</button>
@@ -171,8 +171,8 @@
     </section>
     <footer>
       <div class="footer-links">
-        <a href="https://github.com/jinu2ID" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/jinu-jacob/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/jinu2ID" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">GitHub</a>
+        <a href="https://www.linkedin.com/in/jinu-jacob/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a>
       </div>
       <p>&copy; 2026 Jinu Jacob. All rights reserved.</p>
     </footer>
