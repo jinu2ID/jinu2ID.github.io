@@ -1,3 +1,4 @@
+// Stores project data and dynamically renders project cards to the DOM
 const projects = [
   {
     id: 1,
